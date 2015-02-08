@@ -38,10 +38,10 @@ Or install it yourself as:
 
 Upon installation in the rails app, the gem presents you with two `rake` tasks namely:
 
-1. auto_specs:model
-2. auto_spec:controller [TODO]
+1. auto_specs:models
+2. auto_spec:controllers [TODO]
 
-Running `rake auto_specs:model` would generate the model file specs in the `spec` directory.
+Running `rake auto_specs:models` would generate the model file specs in the `spec` directory.
 
 ## Contributing
 
