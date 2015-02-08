@@ -1,5 +1,6 @@
 require 'auto_specs/generators/base'
 require 'auto_specs/active_record/associations/spec_builder'
+require 'auto_specs/active_record/validations/spec_builder'
 
 module AutoSpecs
   module Generators
@@ -22,7 +23,7 @@ module AutoSpecs
       def push_file
         within_file_code do
           generate_code_for_associations
-          # generate_code_for_validations
+          generate_code_for_validations
         end
         write_file
       end
@@ -53,8 +54,12 @@ describe #{ model_name } do)
         def generate_code_for_validations
           generate_code_block_for('Validations')
           model_name.validators.each do |validator|
-            # TODO...
+            self.file_contents += %Q(
+    #{ AutoSpecs::ActiveRecord::Validations::SpecBuilder.new(validator).to_s })
           end
+          self.file_contents += %Q(
+  end
+)
         end
 
         def generate_code_block_for(entity)
