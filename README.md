@@ -15,9 +15,6 @@ In order to use this gem, the following steps needs to be done before installing
 
 The reason we chose `rspec` and `shoulda-matcher` is due to their simple and efficient DSL which makes writing tests easier.
 
-### Currently we are generating the `associations` but it is being planned for `validations` too. There is an [open issue](https://github.com/aditya-kapoor/auto-specs/issues/5) for this.
-
-
 ## Installation
 
 Add this line to your application's Gemfile:
