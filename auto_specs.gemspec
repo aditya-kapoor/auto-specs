@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Aditya Kapoor"]
   spec.email         = ["aditya.kapoor@vinsol.com"]
   spec.summary       = "Adds certain tasks that would automatically generate some specs for you."
-  spec.description   = ""
+  spec.description   = "Don't Write Specs Yourself."
   spec.homepage      = "https://github.com/aditya-kapoor/auto-specs"
   spec.license       = "MIT"
 
