@@ -33,9 +33,10 @@ module AutoSpecs
           end
 
           def append_options
-            options.keys.collect do |key|
+            options_str = options.keys.collect do |key|
               send("#{ key }_option")
-            end.join(".").prepend('.')
+            end.join('.')
+            options_str.prepend('.') unless options_str.blank?
           end
       end
     end
